@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16.text-overflow</title>
+    <style>
+        .container {
+            width: 100%;
+            display: flex;
+        }
+
+        .box {
+            margin: 10px;
+            width: 200px;
+            background-color: #afa;
+            overflow: hidden;
+            /* white-space: nowrap */
+
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+<div class="container">
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore laborum quod corrupti quisquam voluptatum
+        deleniti neque reiciendis quaerat et natus suscipit veniam odio necessitatibus dolore optio sunt voluptas, eius
+        unde?
+    </div>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, nam ullam debitis quis qui ab. Ducimus
+        necessitatibus officia eos expedita, facere id laudantium quidem, reiciendis laborum quibusdam voluptates minus
+        vero.
+    </div>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, nam amet quis expedita maxime, doloribus iusto
+        impedit cumque nostrum explicabo ab rem qui omnis perspiciatis libero vero dolorem aperiam voluptate!</div>
+</div>
+</body>
+
+</html>

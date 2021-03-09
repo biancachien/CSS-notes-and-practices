@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_box-shadow</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: salmon;
+            float: left;
+            margin: 10px;
+            transition: .5s;
+            /* transition加在box而不是boxshadow呈現效果比較好看(電腦效能) */
+        }
+
+        /* shadow1-hover+transition(下在box) */
+        .box-shadow1 {
+            box-shadow: 5px 5px 5px rgb(214, 158, 158);
+        }
+
+        .box-shadow1:hover {
+            box-shadow: 10px 10px 10px rgb(231, 191, 153);
+        }
+
+        /* shadow2-inset內陰影 */
+        .box-shadow2 {
+            box-shadow: 2px 3px 20px 10px #ccc inset;
+        }
+
+        /* shadow3-多重(層)陰影-放兩個以上 */
+        .box-shadow3 {
+            box-shadow: 2px 3px 20px red,
+                0 6px 20px green;
+        }
+
+        /* shadow4-多重陰影-運用多個inset，注意圖層先後問題 */
+        .box-shadow4 {
+            background-color: yellow;
+            border-radius: 50%;
+            box-shadow: 0 0 30px red inset, 0 0 60px orange inset, 0 0 90px pink inset;
+        }
+
+        /* shadow5-多重陰影-Mickey */
+        .box-shadow5 {
+            width: 50px;
+            height: 50px;
+            background-color: #ccc;
+            border-radius: 50%;
+            box-shadow: 30px 35px 0 10px #ccc, 60px 0 0 0 #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box-shadow1"></div>
+    <div class="box box-shadow2"></div>
+    <div class="box box-shadow3"></div>
+    <div class="box box-shadow4"></div>
+    <div class="box box-shadow5"></div>
+
+</body>
+
+</html>

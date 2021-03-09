@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-origin</title>
+    <style>
+        /* background-origin：設定圖片起始位置 */
+        body {
+            background-color: rgb(189, 157, 219);
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background: url('../images/nook_small.jpg') no-repeat;
+            float: left;
+            margin: 10px;
+            border: 10px dashed #fff;
+            padding: 20px;
+        }
+
+        /* 從左上角border開始算 */
+        .border-box {
+            background-origin: border-box;
+        }
+
+        /* (預設)從左上角padding開始算 */
+        .padding-box {
+            background-origin: padding-box;
+        }
+
+        /* 從左上角box-model內容開始算 */
+        .content-box {
+            background-origin: content-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box border-box"></div>
+    <div class="box padding-box"></div>
+    <div class="box content-box"></div>
+</body>
+
+</html>

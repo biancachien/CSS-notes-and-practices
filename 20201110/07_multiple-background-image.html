@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiple-background</title>
+    <style>
+        .map {
+            width: 800px;
+            height: 450px;
+            margin: 0 auto;
+            background:
+                url('../images/1.png') center center no-repeat,
+                url('../images/2.png') right center no-repeat,
+                url('../images/3.png') left center no-repeat,
+                url('../images/map1.jpg'); /* ''代表字串  */
+            background-size: 0, 0, 0, auto;
+            transition: .5s;
+        }
+
+        /* multiple-background 多重background-image */
+        /* center center是位置 norepeat是否重複出現 */
+        .map:hover {
+            /* 底圖放最後一個，合併寫法要用background而非background-image */
+            background:
+                url('../images/1.png') center center no-repeat,
+                url('../images/2.png') right center no-repeat,
+                url('../images/3.png') left center no-repeat,
+                url('../images/map1.jpg');
+            background-size: 10%, 10%, 10%, auto;
+
+            /*或是用以下也會有漸進的效果 */
+            /* background: 
+               url('../images/1.png') center center no-repeat,
+               url('../images/2.png') right center no-repeat, 
+               url('../images/3.png') left center no-repeat, 
+               url('../images/map1.jpg');
+            background-size: 0, 0, 0, auto;
+            transition: .5s; */
+
+            /* 或可用%表示位置 50%=center 0%=left */
+            /* background: 
+            url('../images/1.png') center bottom no-repeat, 
+            url('../images/2.png') right center no-repeat, 
+            url('../images/3.png') 45% center no-repeat, 
+            url('../images/map1.jpg');
+            background-size: 10%, 10%, 10%, auto; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map"></div>
+</body>
+
+</html>
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, saepe nesciunt. Illum et esse necessitatibus in unde
+blanditiis voluptas amet, a iste facere dolor vero temporibus earum ducimus reiciendis eos enim veritatis pariatur? Cum
+exercitationem sapiente dolorum in omnis? Pariatur, esse consequatur at aperiam nisi inventore sapiente laudantium
+repellendus autem quas. Consequatur nisi quibusdam non, molestias ex aliquid temporibus nobis recusandae culpa? Minus
+maxime amet vitae, reiciendis quis aliquid ad totam recusandae, suscipit perferendis rerum repudiandae sed, illum
+deleniti provident neque nisi expedita ipsam vero placeat laborum? Illo porro aliquid explicabo et libero quia
+laudantium, quos cumque fugit fugiat qui!

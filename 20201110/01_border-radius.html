@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-radius</title>
+    <style>
+        /* 將全部共用一致的放在這裡 */
+        .boxmodule {
+            width: 200px;
+            height: 200px;
+            background-color: coral;
+            margin: 10px;
+            float: left;
+        }
+
+        /* 四個角度相同 */
+        .no1 {
+            border-radius: 50px;
+        }
+
+        /* 四個角度不同 */
+        .no2 {
+            border-radius: 20px 40px 80px 50px;
+        }
+
+        /* no3只有三個值，第四個角會以對面的角度補 */
+        .no3 {
+            border-radius: 20px 40px 80px;
+        }
+
+        /* no4只有二個值，第三和第四個角會以對面的角度補 */
+        .no4 {
+            border-radius: 20px 40px;
+        }
+
+        /* 圓形 */
+        .no5 {
+            border-radius: 50%;
+        }
+
+        /* 扇形 */
+        .no6 {
+            border-radius: 100% 0 0 0;
+        }
+
+        /* 以分號當作界線對應各個角度(分號前對應分號後)：
+           左上：20px 50px;
+           右上：30px 40px;
+           右下：20px 50px;(沒寫所以同對角)
+           左下：30px 40px;(沒寫所以同對角)
+         */
+        .no7 {
+            border-radius: 20px 30px/50px 40px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="boxmodule no1"></div>
+    <div class="boxmodule no2"></div>
+    <div class="boxmodule no3"></div>
+    <div class="boxmodule no4"></div>
+    <div class="boxmodule no5"></div>
+    <div class="boxmodule no6"></div>
+    <div class="boxmodule no7"></div>
+</body>
+
+</html>

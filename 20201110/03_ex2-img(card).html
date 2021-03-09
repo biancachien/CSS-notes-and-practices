@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2-img(card)</title>
+    <style>
+        .card {
+            width: 200px;
+            height: 220px;
+            border-radius: 10px;
+            background-color: lightgray;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 0 rgb(7, 6, 6);
+            margin: 0 auto;
+
+        }
+
+        .figure {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 10px auto 0;
+        }
+
+        .figure img {
+            width: 100%;
+            /* 長方形改正方形，只調寬才不會失真 */
+        }
+
+        h3 {
+            width: 60%;
+            /* width利用百分比調整線的寬，因h3為區塊元素 */
+            border-bottom: 1px solid red;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class=card>
+        <div class="figure">
+            <img src="../images/ex1_pic1.jpg" alt="">
+        </div>
+        <h3>Jean</h3>
+        <p>Hello, nice to meet you.</p>
+    </div>
+</body>
+
+</html>

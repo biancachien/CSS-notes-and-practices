@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .city {
+            /* 手動調整寬高 */
+            max-width: 800px;
+            height: 250px;
+            background: url('../images/city.jpg') center center no-repeat;
+            background-size: 800px auto;
+            /* auto:等比例調整 */
+            margin: 10px;
+            outline: 1px solid #ccc;
+        }
+
+        /* 維持等比例，但無法覆蓋全部版面，，圖片範圍以height: 250px為主 */
+        .contain {
+            background-size: contain;
+        }
+
+        /* 最常使用，能全部覆蓋頁面，圖片範圍以max-width: 800px為主 */
+        .cover {
+            background-size: cover;
+            background-position: 100% 50%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="city"></div>
+    <div class="city contain"></div>
+    <div class="city cover"></div>
+</body>
+
+</html>
