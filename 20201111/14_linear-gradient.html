@@ -12,7 +12,7 @@
             margin-bottom: 20px;
         }
 
-        /* 顏色由上至下分布 */
+        /* 預設：顏色由上至下分布 */
         .grad1 {
             background: linear-gradient(red, orange, yellow, green, blue)
         }
@@ -27,32 +27,37 @@
             background: linear-gradient(135deg, red, orange, yellow, green, blue)
         }
 
-        /* 顏色向右且依顏色比例分布 */
+        /* 顏色向右且依顏色比例分布，到50%為red，到100%為orange */
         .grad4 {
             background: linear-gradient(to right, red 50%, orange 100%)
         }
 
+        /* 顏色從右向左分布+透明度(同一種顏色的漸變) */
         .grad5 {
             background: linear-gradient(to left, rgba(0, 0, 255, 0), rgba(0, 0, 255, 1))
         }
 
+        /* 漸層的多重背景 */
         .grad6 {
             height: 200px;
             width: 200px;
             background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
         }
 
+        /* 漸層的多重背景-顯示如格紋效果 */
         .grad7 {
-            background: linear-gradient(rgba(211, 136, 149, 0.52) 50%, rgba(138, 138, 68, 0.466)), linear-gradient(pink 50%, rgb(245, 245, 124));
+            background: linear-gradient(rgba(255, 192, 203, 0.5) 50%, rgba(245, 245, 124, 0.5)50%), linear-gradient(to right, pink 50%, rgb(245, 245, 124) 50%);
             background-size: 20px 20px;
         }
 
+        /* 圓形的放射狀漸層 */
         .grad8 {
             width: 100px;
             border-radius: 50%;
             background: radial-gradient(circle, purple, yellow 25%, red 100%);
         }
 
+        /* 文字漸變色效果-搭配background-clip */
         h1 {
             font-size: 100px;
             background: repeating-radial-gradient(circle, deeppink, orchid 8%, hotpink 16%, deeppink 25%);

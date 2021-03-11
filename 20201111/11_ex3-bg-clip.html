@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex3-bg-clip</title>
+    <style>
+        /* 貓咪圖 */
+        .background {
+            width: 1200;
+            height: 800px;
+            background: url('../images/cat-5414737_1280.jpg');
+        }
+    
+        /* 假掰線 */
+        h1 {
+            line-height: 2.4; /* 垂直置中效果 */
+            text-align: center;
+            background-color: rgba(255, 255, 255, .76);
+            border-top: 10px solid rgba(255, 255, 255, .76);
+            border-bottom: 10px solid rgba(255, 255, 255, .76);
+            padding: 6px 0;
+            background-clip: content-box; /* 用content-box往內縮 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <h1>為什麼貓呼嚕?</h1>
+    </div>
+</body>
+
+</html>

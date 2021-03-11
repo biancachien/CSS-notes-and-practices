@@ -11,13 +11,23 @@
             display: flex;
         }
 
+        /* 單行文字...效果 */
         .box {
             margin: 10px;
             width: 200px;
             background-color: #afa;
             overflow: hidden;
-            /* white-space: nowrap */
+            /* nowrap：不換行 */
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
 
+        /* 多行文字...效果 */
+        .box2 {
+            margin: 10px;
+            width: 200px;
+            background-color: #afa;
+            overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 4;
@@ -25,21 +35,48 @@
         }
     </style>
 </head>
+<h3>單行文字...效果</h3>
 <div class="container">
     <div class="box">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore laborum quod corrupti quisquam voluptatum
-        deleniti neque reiciendis quaerat et natus suscipit veniam odio necessitatibus dolore optio sunt voluptas, eius
+        deleniti neque reiciendis quaerat et natus suscipit veniam odio necessitatibus dolore optio sunt voluptas,
+        eius
         unde?
     </div>
     <div class="box">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, nam ullam debitis quis qui ab. Ducimus
-        necessitatibus officia eos expedita, facere id laudantium quidem, reiciendis laborum quibusdam voluptates minus
+        necessitatibus officia eos expedita, facere id laudantium quidem, reiciendis laborum quibusdam voluptates
+        minus
         vero.
     </div>
     <div class="box">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, nam amet quis expedita maxime, doloribus iusto
-        impedit cumque nostrum explicabo ab rem qui omnis perspiciatis libero vero dolorem aperiam voluptate!</div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, nam amet quis expedita maxime, doloribus
+        iusto
+        impedit cumque nostrum explicabo ab rem qui omnis perspiciatis libero vero dolorem aperiam voluptate!
+    </div>
 </div>
+
+<h3>多行文字...效果</h3>
+<div class="container">
+    <div class="box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore laborum quod corrupti quisquam voluptatum
+        deleniti neque reiciendis quaerat et natus suscipit veniam odio necessitatibus dolore optio sunt voluptas,
+        eius
+        unde?
+    </div>
+    <div class="box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, nam ullam debitis quis qui ab. Ducimus
+        necessitatibus officia eos expedita, facere id laudantium quidem, reiciendis laborum quibusdam voluptates
+        minus
+        vero.
+    </div>
+    <div class="box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, nam amet quis expedita maxime, doloribus
+        iusto
+        impedit cumque nostrum explicabo ab rem qui omnis perspiciatis libero vero dolorem aperiam voluptate!
+    </div>
+</div>
+
 </body>
 
 </html>

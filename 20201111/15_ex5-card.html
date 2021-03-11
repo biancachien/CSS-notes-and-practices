@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex5-card</title>
+    <style>
+        .card {
+            width: 220px;
+            /* height: 100%; */
+            border-radius: 10px;
+            background-color: rgb(234, 241, 243);
+            text-align: center;
+            padding-bottom: 20px;
+            margin: 0 auto;
+            position: relative;
+            /* hidden將banner超出去的隱藏起來 */
+            overflow: hidden;
+            box-shadow: 5px 5px 5px 0 rgb(7, 6, 6)
+        }
+
+        .banner {
+            height: 100px;
+            background: url('../images/flowers.jpg');
+            background-size: cover;
+        }
+
+
+        .figure {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            border-radius: 50%;
+            /* margin可以為負，但padding不行 */
+            margin: -50px auto -20px;
+            /* position: absolute;
+            top: 50px;
+            calc(50% - 高的一半)置中的做法
+            left: calc(50% - 50px); */
+        }
+
+        .figure img {
+            width: 100%;
+            /* height: 100%; */
+
+        }
+
+        h3 {
+            width: 80%;
+            border-bottom: 1px solid red;
+            margin: 30px auto 10px auto;
+            padding-bottom: 10px;
+        }
+
+        .btn {
+            width: 80%;
+            /* a為行內元素，下block變成區塊元素 */
+            display: block;
+            text-decoration: none;
+            color: black;
+            background: linear-gradient(pink, red);
+            padding: 5px;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class=card>
+        <div class="banner"></div>
+        <div class="figure">
+            <img src="../images/ex1_pic1.jpg" alt="">
+        </div>
+
+        <h3>Jean</h3>
+        <p>Hello, nice to meet you.</p>
+
+        <a href="#" class="btn">Follow me</a>
+    </div>
+</body>
+
+</html>
