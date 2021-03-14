@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rotate Y</title>
+    <style>
+        .demo {
+            margin: 200px;
+            width: 400px;
+            height: 300px;
+            perspective: 1000px;
+            display: block;
+        }
+
+        .demo .title {
+            position: absolute;
+            margin: -120px 0 0 -120px;
+            font-weight: 700;
+        }
+
+        .coordinate .axis-x,
+        .coordinate .axis-y {
+            border-top: 1px solid gray;
+            border-left: 1px solid gray;
+        }
+
+        .coordinate .axis-x {
+            position: absolute;
+            width: 300px;
+            height: 1px;
+            transform: translate(-100px, 50px);
+        }
+
+        .coordinate .axis-x:before {
+            content: "-x";
+        }
+
+        .coordinate .axis-x:after {
+            float: right;
+            content: "+x";
+        }
+
+        .coordinate .axis-y {
+            position: absolute;
+            width: 1px;
+            height: 300px;
+            transform: translate(50px, -100px);
+        }
+
+        .coordinate .axis-y:before {
+            position: absolute;
+            content: "-y";
+            margin: 0 0 0 5px;
+            width: 20px;
+        }
+
+        .coordinate .axis-y:after {
+            position: absolute;
+            content: "+y";
+            margin: 280px 0 0 5px;
+            width: 20px;
+        }
+
+        .coordinate .axis-z {
+            position: absolute;
+            width: 300px;
+            height: 1px;
+            transform: translate(-100px, 50px) rotate(33deg);
+        }
+
+        .coordinate .axis-z {
+            border-top: 1px dashed gray;
+        }
+
+        .coordinate .axis-z:before {
+            content: "+z";
+        }
+
+        .coordinate .axis-z:after {
+            float: right;
+            content: "-z";
+        }
+
+
+        .demo .face {
+            width: 100px;
+            height: 100px;
+            background: #a00;
+            color: #fff;
+            font-size: 40px;
+            text-align: center;
+            opacity: .8;
+        }
+
+        .face {
+            transform: rotate3d(0, 1, 0, 0deg) translate3d(0, 0, -150px);
+            animation-name: rotateY;
+            animation-duration: 3s;
+            /* animation-delay: 0.5s; */
+            animation-iteration-count: infinite;
+        }
+
+        /* 我們要改變物件的中心點，讓他呈現出 3D 旋轉的效果，我使用 translate3d(0, 0, -150px)，把物件往 -z 軸移動 150 px，再讓這個物件對著 y 軸旋轉 */
+        @keyframes rotateY {
+            0% {
+                transform: rotate3d(0, 0, 0, 0) translate3d(0, 0, -150px);
+            }
+
+            100% {
+                transform: rotate3d(0, 1, 0, 360deg) translate3d(0, 0, -150px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo1 demo">
+        <div class="title">Rotate Y</div>
+        <div class="coordinate">
+            <div class="axis-x"></div>
+            <div class="axis-y"></div>
+            <div class="axis-z"></div>
+        </div>
+        <div class="face">
+            <div class="center"></div>
+        </div>
+    </div>
+</body>
+
+</html>

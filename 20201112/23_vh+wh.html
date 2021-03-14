@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vh+wh</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 寬滿版通常建議還是用100%設，而非100vw(會包含卷軸寬)，避免爆版 */
+        .box {
+            width: 100%;
+            height: 50vh;
+            background-color: #afa;
+        }
+
+        .box2 {
+            width: 100%;
+            height: 50vh;
+            background-color: #faf;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <span>123</span>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D perspective</title>
+    <style>
+        .top-level {
+            margin: 20px 0 0 30px;
+        }
+
+        .red-box {
+            border: 1px solid red;
+            width: 200px;
+            height: 200px;
+
+            transform: rotateX(45deg);
+            transform-origin: 50% 50%;
+        }
+
+        #view {
+            width: 200px;
+            height: 200px;
+            border: 1px solid green;
+            perspective: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-level">
+        <div>
+            <div id="view">
+                <div class="red-box">
+                    <p>
+                        rotateX(45deg) ...
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="controller">
+            <p>Perspective:</p>
+            <input type="range" min="0" max="2000" value="400" step="10" id="rangeInput">
+            <p id="showVal"> 400px </p>
+        </div>
+    </div>
+
+
+    <script>
+        function setView(value) {
+            document.getElementById("showVal").innerHTML = value + "px";
+            document.getElementById("view").style.perspective = value + "px";
+        }
+
+
+        document.getElementById("rangeInput").addEventListener("input", function (event) {
+            setView(event.target.value);
+        });
+
+        document.getElementById("rangeInput").addEventListener("change", function (event) {
+            setView(event.target.value);
+        });                            
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable</title>
+    <style>
+        /* 定義變數 */
+        /* boxwidth為自訂名稱  */
+        /* :root統一放主要的樣式規定 */
+        :root {
+            --boxwidth: 200px;
+
+        }
+
+        /* 使用變數 */
+        .box {
+            width: var(--boxwidth);
+            height: var(--boxwidth);
+            background-color: #faf;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: #faa;
+            margin: 10px;
+            transition: 3s;
+        }
+
+        .box:hover {
+            background: #aff;
+            width: 1000px;
+        }
+
+        /* 漸快 */
+        .ease-in {
+            transition-timing-function: ease-in;
+        }
+
+        /* 漸慢 */
+        .ease-out {
+            transition-timing-function: ease-out;
+        }
+
+        /* 依貝茲曲線決定x1,y1,x2,y2 */
+        .cubic {
+            transition-timing-function: cubic-bezier(.22, .86, .74, .32);
+        }
+
+        /* bg,width,ease都漸變delay0.5秒，bg紅色不用管 */
+        /* 完整寫法為background .5s (ease 0), width .5s ease .5s; */
+        .combine {
+            transition: background .5s, width .5s ease .5s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box ease-in">ease-in</div>
+    <div class="box ease-out">ease-out</div>
+    <div class="box cubic">cubic-bezier</div>
+    <div class="box combine">combine</div>
+
+</body>
+
+</html>

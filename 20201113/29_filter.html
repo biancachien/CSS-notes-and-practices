@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+    <style>
+        /* 灰階效果 */
+        .grayscale {
+            filter: grayscale(1);
+        }
+
+        /* 懷舊效果 */
+        .sepia {
+            filter: sepia(1);
+        }
+
+        /* 飽和效果，0.5：半飽和 */
+        .saturate {
+            filter: saturate(0.5);
+        }
+
+        /* 下拉陰影：沿著形狀做陰影 */
+        .drop-shadow {
+            filter: drop-shadow(5px 5px 5px #333);
+        }
+    </style>
+</head>
+
+<body>
+    <img class="grayscale" src="../images/nook_small.jpg" alt="">
+
+    <img class="sepia" src="../images/nook_small.jpg" alt="">
+
+    <img class="saturate" src="../images/nook_small.jpg" alt="">
+
+    <img class="drop-shadow" src="../images/heart.png" alt="">
+</body>
+
+</html>

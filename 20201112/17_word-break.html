@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word-break</title>
+    <style>
+        .container {
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        .box {
+            border: 1px solid rgb(240, 13, 13);
+            margin: 5px;
+        }
+
+        /* ---word-break--- */
+
+        /* 文字斷行方式-word-break:normal */
+        /* 預設：中文英文都沒差 */
+        .word-break-normal {
+            word-break: normal;
+        }
+
+        /* 文字斷行方式-word-break:break-all */
+        /* 英文有差，會斷單個字母 */
+        .word-break-break-all {
+            word-break: break-all;
+        }
+
+        /* 文字斷行方式-word-break:keep-all */
+        /* 中文有差，會爆版 */
+        .word-break-keep-all {
+            word-break: keep-all;
+        }
+
+        /* ---word-wrap--- */
+
+        /* 當詞斷行後，仍超出容器的文字斷行方式-word-wrap:normal */
+        .word-wrap-normal {
+            word-wrap: normal;
+        }
+
+        /* 當詞斷行後，不會超出容器的文字斷行方式-word-wrap:keep-all */
+        .word-wrap-keep-all {
+            word-wrap: keep-all;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box word-break-normal">
+            <h3>預設：中文英文都沒差</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolorum ea expedita eveniet? Eligendi
+            quaerat
+            et illo modi harum esse perspiciatis ex nostrum, earum aliquid dolorum blanditiis repellat totam commodi.
+            明確笑容收集，故意規範，機器禁止動力靈活英語調查競爭力天堂可愛著名基於看來核心，毫無覺得韓國蘋果精美，品種投入測試等等怎麼參加適當，盯着都市先進暫無根本浙江中壢咖啡樹林不要交友印度，就是暴力網頁課程，理想推進轉載相比等等烏日是不是財富依舊站長居住，精靈貢。
+        </div>
+        <div class="box word-break-break-all">
+            <h3>英文有差，會斷單個字母</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolorum ea expedita eveniet? Eligendi
+            quaerat
+            et illo modi harum esse perspiciatis ex nostrum, earum aliquid dolorum blanditiis repellat totam commodi.
+            明確笑容收集，故意規範，機器禁止動力靈活英語調查競爭力天堂可愛著名基於看來核心，毫無覺得韓國蘋果精美，品種投入測試等等怎麼參加適當，盯着都市先進暫無根本浙江中壢咖啡樹林不要交友印度，就是暴力網頁課程，理想推進轉載相比等等烏日是不是財富依舊站長居住，精靈貢。
+        </div>
+        <div class="box word-break-keep-all">
+            <h3>中文有差，會爆版</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolorum ea expedita eveniet? Eligendi
+            quaerat
+            et illo modi harum esse perspiciatis ex nostrum, earum aliquid dolorum blanditiis repellat totam commodi.
+            明確笑容收集，故意規範，機器禁止動力靈活英語調查競爭力天堂可愛著名基於看來核心，毫無覺得韓國蘋果精美，品種投入測試等等怎麼參加適當，盯着都市先進暫無根本浙江中壢咖啡樹林不要交友印度，就是暴力網頁課程，理想推進轉載相比等等烏日是不是財富依舊站長居住，精靈貢。
+        </div>
+    </div>
+    <div class="container">
+        <div class="box word-wrap-normal">
+            <h3>預設：英文單字過長仍只會在同一行，會爆版</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolorum ea expedita eveniet? Eligendi
+            quaerat <span>Pneumonoultramicroscopicsilicovolcanoconiosis</span>
+            et illo modi harum esse perspiciatis ex nostrum, earum aliquid dolorum blanditiis repellat totam commodi.
+            明確笑容收集，故意規範，機器禁止動力靈活英語調查競爭力天堂可愛著名基於看來核心，毫無覺得韓國蘋果精美，品種投入測試等等怎麼參加適當，盯着都市先進暫無根本浙江中壢咖啡樹林不要交友印度，就是暴力網頁課程，理想推進轉載相比等等烏日是不是財富依舊站長居住，精靈貢。
+        </div>
+        <div class="box word-wrap-keep-all">
+            <h3>bootstrap的預設：英文單字過長會換行，不會爆版</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolorum ea expedita eveniet? Eligendi
+            quaerat <span>Pneumonoultramicroscopicsilicovolcanoconiosis</span>
+            et illo modi harum esse perspiciatis ex nostrum, earum aliquid dolorum blanditiis repellat totam commodi.
+            明確笑容收集，故意規範，機器禁止動力靈活英語調查競爭力天堂可愛著名基於看來核心，毫無覺得韓國蘋果精美，品種投入測試等等怎麼參加適當，盯着都市先進暫無根本浙江中壢咖啡樹林不要交友印度，就是暴力網頁課程，理想推進轉載相比等等烏日是不是財富依舊站長居住，精靈貢。
+        </div>
+    </div>
+</body>
+
+</html>

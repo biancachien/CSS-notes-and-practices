@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: lightseagreen;
+            float: left;
+            margin: 10px;
+            transition: .5s;
+        }
+
+        /*位移(x,y) */
+        .translate:hover {
+            transform: translate(30px, 100px);
+        }
+
+        /* 旋轉角度 */
+        .rotate:hover {
+            transform: rotate(90deg);
+        }
+
+        /* 縮放倍數(數字代表倍數) */
+        .scale:hover {
+            transform: scale(2, 2);
+        }
+
+        /* 傾斜角度，類似平行四邊形的位移 */
+        .skew {
+            transform: skewY(-30deg);
+        }
+
+        /* 好幾種效果一起寫的合併寫法 */
+        .combo {
+            background-color: transparent;
+        }
+        .combo:hover {
+            transform: translatex(500px) rotate(720deg);
+
+        }
+
+        /* transform-origin：設定變形中心點的做法  */
+        .rotate-origin {
+            /* transform-origin不要放在hover裡 */
+            /* 和transform: rotate(720deg)搭配使用 */
+            transform-origin: 20px 70px;
+        }
+        .wrapper {
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+        .wrapper:hover .rotate-origin {
+            transform: rotate(720deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box translate">translate</div>
+    <div class="box rotate">rotate</div>
+    <div class="box scale">scale</div>
+    <div class="box skew">skew</div>
+    <div class="box combo">
+        <img src="../images/1.png" alt="">
+    </div>
+    <div class="wrapper">
+        <div class="box rotate-origin"></div>
+    </div>
+</body>
+
+</html>

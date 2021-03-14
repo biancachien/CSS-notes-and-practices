@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .box {
+            background-color: rgb(125, 139, 221);
+            border-radius: 50%;
+            height: 95px;
+            width: 95px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            
+            /* 選擇動畫(名稱) */
+            animation-name: pinpon;
+            /* 動畫持續時間 */
+            animation-duration: 5s;
+            /* 動畫播放的變速效果 */
+            animation-timing-function: ease-in;
+            /* 動畫延遲開始時間 */
+            animation-delay: 1s;
+
+            /* 動畫停止時顯示的畫面 */
+            animation-fill-mode: forwards;
+            /* 動畫播放的方向 */
+            animation-direction: alternate;
+            /* 動畫播放的次數，和animation-direction: alternate做搭配 */
+            animation-iteration-count: infinite;
+
+        }
+
+        /* @keyframes：關鍵引格  後接變數名稱 寫劇本*/
+        /* 0%=from；100%=to */
+        @keyframes pinpon {
+            0% {
+                left: 0;
+                top: 0;
+            }
+
+            50% {
+                left: 200px;
+                top: 150px;
+            }
+
+            100% {
+                left: 300px;
+                top: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

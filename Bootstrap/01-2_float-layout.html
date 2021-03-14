@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float2-排版</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #faa;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .menu {
+            background-color: #ffa;
+            /* float浮起來後，副容器抓不到它的高 */
+            float: right;
+            min-height: 400px;
+            width: 150px;
+        }
+
+        @media screen and (min-width:500px) {
+            .menu {
+                width: 550px;
+            }
+        }
+
+        .content {
+            background-color: #aff;
+            float: left;
+            min-height: 400px;
+            width: 250px;
+        }
+
+        .footer {
+            background-color: #afa;
+            padding: 10px;
+            /* clear: both不論左右都清掉 */
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="menu">menu
+            <ul>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <div class="content">content</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>

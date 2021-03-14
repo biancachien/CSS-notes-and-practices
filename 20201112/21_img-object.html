@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img-object</title>
+    <style>
+        .box {
+            float: left;
+            width: 40%;
+            margin: 10px;
+            height: 200px;
+            border: 1px solid #ccc;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 預設：不管比例，就是把它填滿 */
+        .fill {
+            object-fit: fill;
+        }
+
+        /* 保持比例，完整顯示內容 */
+        .contain {
+            object-fit: contain;
+        }
+
+        /* 保持比例，填滿空間沒有空白為主 */
+        .cover {
+            object-fit: cover;
+        }
+
+        /* 不縮放，多大就多大 */
+        .none {
+            object-fit: none;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- emmet:.box>img.fill[src="./images/ex1_pic1.jp"] -->
+    <div class="box"><img src="../images/ex1_pic1.jpg" alt="" class="fill"></div>
+    <div class="box"><img src="../images/ex1_pic1.jpg" alt="" class="contain"></div>
+    <div class="box"><img src="../images/ex1_pic1.jpg" alt="" class="cover"></div>
+    <div class="box"><img src="../images/ex1_pic1.jpg" alt="" class="none"></div>
+
+</body>
+
+</html>

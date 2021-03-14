@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em+rem</title>
+    <style>
+        html {
+            font-size: 20px;
+        }
+
+        div {
+            font-size: 1.5rem;
+            /* 若為em則可能因繼承父層而每個子層font-size不同 */
+        }
+
+        @media screen and (max-width:375px) {
+            html {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        1st layer
+        <div class="article">
+            2nd layer
+            <div class="inside-text">
+                3nd layer
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
