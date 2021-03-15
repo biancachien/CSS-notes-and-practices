@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media query</title>
+    <style>
+        /* 桌機優先寫法max-width(由大到小) */
+        /* 全螢幕顯示時
+        h1 {
+            color: red;
+        }
+
+        max-width變成767px時顏色改為blue
+        @media screen and (max-width: 767px) {
+            h1 {
+                color: blue;
+            }
+        }
+
+        max-width變成480px時顏色改為green
+        @media screen and (max-width: 480px) {
+            h1 {
+                color: green;
+            }
+        } */
+
+        /* 手機優先寫法min-width(由小到大) */
+        h1 {
+            color: green;
+        }
+
+        @media screen and (min-width:480px) {
+            h1 {
+                color: blue;
+            }
+        }
+        /* @media screen and (min-width:480px)也可以寫成區間
+           @media screen and (min-width:480px) and (max-width:766px) {
+            h1 {
+                color: blue;
+            }
+        } */
+
+
+        @media screen and (min-width:767px) {
+            h1 {
+                color: red;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello</h1>
+</body>
+
+</html>
