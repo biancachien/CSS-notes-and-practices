@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zeczec</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <style>
@@ -25,11 +25,13 @@
         .cat-title {
             margin-top: -20px;
             margin-left: 50%;
+            /* 遮蓋後面的線條 */
             background-color: #fff;
             padding: 7px 15px;
             transform: translateX(-50%);
         }
 
+        /* 想改某個container時使用 */
         @media (min-width: 1200px) {
             .container {
                 max-width: 1000px;
@@ -43,8 +45,10 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="logo ">
+                <!-- navbar-left -->
+                <div class="logo">
                     <h1 class="gray text-mono hover-logo ma0 d-flex align-items-center">
+                        <!-- logo -->
                         <div class="dib logo-safari-fix">
                             <svg class="logo v-mid" style="height: 28px; width: 28px; " viewBox="0 0 138 138"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +58,8 @@
                                 </path>
                             </svg>
                         </div>
-                        <svg class="v-mid ml2 ml-2 mt-2" style="height: 20px; width: 44px; " viewBox="0 0 64.08 28.95"
+                        <!-- 嘖嘖svg -->
+                        <svg class="v-mid ml-2 mt-2" style="height: 20px; width: 44px; " viewBox="0 0 64.08 28.95"
                             xmlns="http://www.w3.org/2000/svg">
                             <title>嘖嘖</title>
                             <path
@@ -70,17 +75,17 @@
 
                     </h1>
                 </div>
-
+                <!-- navbar-left2 -->
                 <div class="nav-links mr-auto my-auto">
                     <a class="text-dark mr-2" href="#">探索</a>
                     <a class="text-dark mr-2" href="#">故事牆</a>
                     <a class="text-dark" href="#">提案</a>
                 </div>
-
+                <!-- navbar-right -->
                 <div class="login my-auto">
-                    <button class="btn btn-dark mr-1">登入</button>
-                    <button class="btn btn-dark mr-1">註冊</button>
-                    <button class="btn btn-dark text-primary">Facebok登入</button>
+                    <button class="btn btn-light mr-1">登入</button>
+                    <button class="btn btn-light mr-1">註冊</button>
+                    <button class="btn btn-light text-primary">Facebok登入</button>
                 </div>
             </div>
         </div>
@@ -88,8 +93,14 @@
 
     <banner>
         <div class="container">
-            <div class="row position-relative mt-5"
-                style="width: 100%;height:0px;padding-top:56% ; background:url(https://upload.cc/i1/2020/10/14/XEwRBr.png);background-size: cover;">
+            <!-- 圖片499(高)/891(寬)=56%，padding-top:56% -->
+            <!-- 不用img用background的作法(可做圖片RWD效果) -->
+            <div class="row position-relative mt-5" style="
+                width: 100%;
+                height:0px;
+                padding-top:56%;
+                background:url(https://upload.cc/i1/2020/10/14/XEwRBr.png);
+                background-size: cover;">
                 <div class="text-in-banner position-absolute text-light text-center w-100">
                     <p>剩下2天</p>
                     <p>《一年生》植物日曆｜讓 2021 的每一天都有植物相伴。</p>
@@ -108,18 +119,17 @@
     <nav>
         <div class="container mb-5">
             <div class="row border-top border-bottom my-4">
+                <!-- 製作文字蓋平行線 -->
                 <div class="cat-title">探索專案類別</div>
-
-
                 <div class="cat-links my-3 mx-auto">
                     <a href="#" class="col-auto text-dark">空間</a>
-                    <a href="#" class="col-auto text-dark">空間</a>
-                    <a href="#" class="col-auto text-dark">空間</a>
-                    <a href="#" class="col-auto text-dark">空間</a>
-                    <a href="#" class="col-auto text-dark">空間</a>
-                    <a href="#" class="col-auto text-dark">空間</a>
-                    <a href="#" class="col-auto text-dark">空間</a>
-                    <a href="#" class="col-auto text-dark">空間</a>
+                    <a href="#" class="col-auto text-dark">遊戲</a>
+                    <a href="#" class="col-auto text-dark">地方創生</a>
+                    <a href="#" class="col-auto text-dark">藝術</a>
+                    <a href="#" class="col-auto text-dark">教育</a>
+                    <a href="#" class="col-auto text-dark">插畫漫畫</a>
+                    <a href="#" class="col-auto text-dark">出版</a>
+                    <a href="#" class="col-auto text-dark">電影動畫</a>
 
                 </div>
             </div>
@@ -128,247 +138,214 @@
 
     <main>
         <div class="container">
+            <!-- 上方標題 -->
             <div class="row justify-content-between">
                 <div class="title-left">
                     <h3>群眾集資</h3>
                 </div>
                 <div class="title-right">
-                    <button class="btn btn-outline-danger">更多 ▸</button>
+                    <button class="btn btn-outline-primary">更多 ▸</button>
                 </div>
             </div>
-
+            <!-- 下方商品 -->
             <div class="row mt-5">
+                <!-- 商品圖RWD:縮放3個或2個 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="img-wrap w-100" style="height: 190px;">
                         <img class="w-100 h-100" style="object-fit: cover;"
                             src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_242784_image_big.jpg?1605181037"
                             alt="">
                     </div>
-
                     <div>
                         <h5>BRISE C260 空氣清淨機 | 唯一國家級認證 | 淨化99.99%空污病毒 | 57折優惠中</h5>
                         <p>科技 By BriseCare B.V.</p>
                         <p>唯一獲得「國家衛生研究院」腸病毒試驗報告的清淨機，能去除99.9%台灣流行腸病毒，並過濾 99.9% PM2.5、...</p>
                     </div>
-
                     <div class="d-flex justify-content-between" style="border-top:2px solid green;">
                         <small>剩下 13 天</small>
                         <span>NT$5,139,676</span>
                     </div>
-
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="img-wrap">
-                        <img class="w-100"
+                    <div class="img-wrap w-100" style="height: 190px;">
+                        <img class="w-100 h-100" style="object-fit: cover;"
                             src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_242784_image_big.jpg?1605181037"
                             alt="">
                     </div>
-
                     <div>
                         <h5>BRISE C260 空氣清淨機 | 唯一國家級認證 | 淨化99.99%空污病毒 | 57折優惠中</h5>
                         <p>科技 By BriseCare B.V.</p>
                         <p>唯一獲得「國家衛生研究院」腸病毒試驗報告的清淨機，能去除99.9%台灣流行腸病毒，並過濾 99.9% PM2.5、...</p>
                     </div>
-
                     <div class="d-flex justify-content-between" style="border-top:2px solid green;">
                         <small>剩下 13 天</small>
                         <span>NT$5,139,676</span>
                     </div>
-
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="img-wrap">
-                        <img class="w-100"
+                    <div class="img-wrap w-100" style="height: 190px;">
+                        <img class="w-100 h-100" style="object-fit: cover;"
                             src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_242784_image_big.jpg?1605181037"
                             alt="">
                     </div>
-
                     <div>
                         <h5>BRISE C260 空氣清淨機 | 唯一國家級認證 | 淨化99.99%空污病毒 | 57折優惠中</h5>
                         <p>科技 By BriseCare B.V.</p>
                         <p>唯一獲得「國家衛生研究院」腸病毒試驗報告的清淨機，能去除99.9%台灣流行腸病毒，並過濾 99.9% PM2.5、...</p>
                     </div>
-
                     <div class="d-flex justify-content-between" style="border-top:2px solid green;">
                         <small>剩下 13 天</small>
                         <span>NT$5,139,676</span>
                     </div>
-
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="img-wrap">
-                        <img class="w-100"
+                    <div class="img-wrap w-100" style="height: 190px;">
+                        <img class="w-100 h-100" style="object-fit: cover;"
                             src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_242784_image_big.jpg?1605181037"
                             alt="">
                     </div>
-
                     <div>
                         <h5>BRISE C260 空氣清淨機 | 唯一國家級認證 | 淨化99.99%空污病毒 | 57折優惠中</h5>
                         <p>科技 By BriseCare B.V.</p>
                         <p>唯一獲得「國家衛生研究院」腸病毒試驗報告的清淨機，能去除99.9%台灣流行腸病毒，並過濾 99.9% PM2.5、...</p>
                     </div>
-
                     <div class="d-flex justify-content-between" style="border-top:2px solid green;">
                         <small>剩下 13 天</small>
                         <span>NT$5,139,676</span>
                     </div>
-
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="img-wrap">
-                        <img class="w-100"
+                    <div class="img-wrap w-100" style="height: 190px;">
+                        <img class="w-100 h-100" style="object-fit: cover;"
                             src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_242784_image_big.jpg?1605181037"
                             alt="">
                     </div>
-
                     <div>
                         <h5>BRISE C260 空氣清淨機 | 唯一國家級認證 | 淨化99.99%空污病毒 | 57折優惠中</h5>
                         <p>科技 By BriseCare B.V.</p>
                         <p>唯一獲得「國家衛生研究院」腸病毒試驗報告的清淨機，能去除99.9%台灣流行腸病毒，並過濾 99.9% PM2.5、...</p>
                     </div>
-
                     <div class="d-flex justify-content-between" style="border-top:2px solid green;">
                         <small>剩下 13 天</small>
                         <span>NT$5,139,676</span>
                     </div>
-
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="img-wrap">
-                        <img class="w-100"
+                    <div class="img-wrap w-100" style="height: 190px;">
+                        <img class="w-100 h-100" style="object-fit: cover;"
                             src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_242784_image_big.jpg?1605181037"
                             alt="">
                     </div>
-
                     <div>
                         <h5>BRISE C260 空氣清淨機 | 唯一國家級認證 | 淨化99.99%空污病毒 | 57折優惠中</h5>
                         <p>科技 By BriseCare B.V.</p>
                         <p>唯一獲得「國家衛生研究院」腸病毒試驗報告的清淨機，能去除99.9%台灣流行腸病毒，並過濾 99.9% PM2.5、...</p>
                     </div>
-
                     <div class="d-flex justify-content-between" style="border-top:2px solid green;">
                         <small>剩下 13 天</small>
                         <span>NT$5,139,676</span>
                     </div>
-
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="img-wrap">
-                        <img class="w-100"
+                    <div class="img-wrap w-100" style="height: 190px;">
+                        <img class="w-100 h-100" style="object-fit: cover;"
                             src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_242784_image_big.jpg?1605181037"
                             alt="">
                     </div>
-
                     <div>
                         <h5>BRISE C260 空氣清淨機 | 唯一國家級認證 | 淨化99.99%空污病毒 | 57折優惠中</h5>
                         <p>科技 By BriseCare B.V.</p>
                         <p>唯一獲得「國家衛生研究院」腸病毒試驗報告的清淨機，能去除99.9%台灣流行腸病毒，並過濾 99.9% PM2.5、...</p>
                     </div>
-
                     <div class="d-flex justify-content-between" style="border-top:2px solid green;">
                         <small>剩下 13 天</small>
                         <span>NT$5,139,676</span>
                     </div>
-
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="img-wrap">
-                        <img class="w-100"
+                    <div class="img-wrap w-100" style="height: 190px;">
+                        <img class="w-100 h-100" style="object-fit: cover;"
                             src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_242784_image_big.jpg?1605181037"
                             alt="">
                     </div>
-
                     <div>
                         <h5>BRISE C260 空氣清淨機 | 唯一國家級認證 | 淨化99.99%空污病毒 | 57折優惠中</h5>
                         <p>科技 By BriseCare B.V.</p>
                         <p>唯一獲得「國家衛生研究院」腸病毒試驗報告的清淨機，能去除99.9%台灣流行腸病毒，並過濾 99.9% PM2.5、...</p>
                     </div>
-
                     <div class="d-flex justify-content-between" style="border-top:2px solid green;">
                         <small>剩下 13 天</small>
                         <span>NT$5,139,676</span>
                     </div>
-
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="img-wrap">
-                        <img class="w-100"
+                    <div class="img-wrap w-100" style="height: 190px;">
+                        <img class="w-100 h-100" style="object-fit: cover;"
                             src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_242784_image_big.jpg?1605181037"
                             alt="">
                     </div>
-
                     <div>
                         <h5>BRISE C260 空氣清淨機 | 唯一國家級認證 | 淨化99.99%空污病毒 | 57折優惠中</h5>
                         <p>科技 By BriseCare B.V.</p>
                         <p>唯一獲得「國家衛生研究院」腸病毒試驗報告的清淨機，能去除99.9%台灣流行腸病毒，並過濾 99.9% PM2.5、...</p>
                     </div>
-
                     <div class="d-flex justify-content-between" style="border-top:2px solid green;">
                         <small>剩下 13 天</small>
                         <span>NT$5,139,676</span>
                     </div>
-
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="img-wrap">
-                        <img class="w-100"
+                    <div class="img-wrap w-100" style="height: 190px;">
+                        <img class="w-100 h-100" style="object-fit: cover;"
                             src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_242784_image_big.jpg?1605181037"
                             alt="">
                     </div>
-
                     <div>
                         <h5>BRISE C260 空氣清淨機 | 唯一國家級認證 | 淨化99.99%空污病毒 | 57折優惠中</h5>
                         <p>科技 By BriseCare B.V.</p>
                         <p>唯一獲得「國家衛生研究院」腸病毒試驗報告的清淨機，能去除99.9%台灣流行腸病毒，並過濾 99.9% PM2.5、...</p>
                     </div>
-
                     <div class="d-flex justify-content-between" style="border-top:2px solid green;">
                         <small>剩下 13 天</small>
                         <span>NT$5,139,676</span>
                     </div>
-
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="img-wrap">
-                        <img class="w-100"
+                    <div class="img-wrap w-100" style="height: 190px;">
+                        <img class="w-100 h-100" style="object-fit: cover;"
                             src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_242784_image_big.jpg?1605181037"
                             alt="">
                     </div>
-
                     <div>
                         <h5>BRISE C260 空氣清淨機 | 唯一國家級認證 | 淨化99.99%空污病毒 | 57折優惠中</h5>
                         <p>科技 By BriseCare B.V.</p>
                         <p>唯一獲得「國家衛生研究院」腸病毒試驗報告的清淨機，能去除99.9%台灣流行腸病毒，並過濾 99.9% PM2.5、...</p>
                     </div>
-
                     <div class="d-flex justify-content-between" style="border-top:2px solid green;">
                         <small>剩下 13 天</small>
                         <span>NT$5,139,676</span>
                     </div>
-
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="img-wrap">
-                        <img class="w-100"
+                    <div class="img-wrap w-100" style="height: 190px;">
+                        <img class="w-100 h-100" style="object-fit: cover;"
                             src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_242784_image_big.jpg?1605181037"
                             alt="">
                     </div>
-
                     <div>
                         <h5>BRISE C260 空氣清淨機 | 唯一國家級認證 | 淨化99.99%空污病毒 | 57折優惠中</h5>
                         <p>科技 By BriseCare B.V.</p>
                         <p>唯一獲得「國家衛生研究院」腸病毒試驗報告的清淨機，能去除99.9%台灣流行腸病毒，並過濾 99.9% PM2.5、...</p>
                     </div>
-
                     <div class="d-flex justify-content-between" style="border-top:2px solid green;">
                         <small>剩下 13 天</small>
                         <span>NT$5,139,676</span>
                     </div>
-
                 </div>
             </div>
 
-            <div class="row justify-content-center mt-5">
+            <!-- 分頁 -->
+            <div class="row justify-content-center my-5">
                 <nav aria-label="Page navigation example ">
                     <ul class="pagination">
                         <li class="page-item"><a class="page-link" href="#">Previous</a></li>
@@ -382,6 +359,42 @@
         </div>
     </main>
 
+    <footer class="mb-5">
+        <div class="container">
+            <div class="row">
+                <!-- col-md未加數字為均分 -->
+                <div class="col-12 col-md d-flex flex-column">
+                    <h4>社群</h4>
+                    <a href="#">Youtube</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+                <div class="col-12 col-md d-flex flex-column">
+                    <h4>幫助</h4>
+                    <a href="#">常見問答</a>
+                    <a href="#">使用條款</a>
+                    <a href="#">隱私權政策</a>
+                </div>
+                <div class="col-12 col-md d-flex flex-column">
+                    <h4>關於</h4>
+                    <a href="#">關於我們</a>
+                    <a href="#">商標資源</a>
+                    <a href="#">© 嘖室股份有限公司</a>
+                </div>
+                <!-- mt-5推開zeczec logo和字的距離，但設斷點mt-md-0在桌機時mt-5效果消失 -->
+                <div class="col-12 col-md mt-5 mt-md-0">
+                    <svg class="logo mr2 middle" style="height: 28px; width: 28px; " viewBox="0 0 138 138"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>zeczec</title>
+                        <path
+                            d="M69 0a69 69 0 1 0 69 69A69 69 0 0 0 69 0zm38.7 75.53l-1.55 7.18c-.23 1.18-.81 1.54-1.82 1.49l-40.48-1.9a1.72 1.72 0 0 1-1.43-2.2l2.3-11.94a2.05 2.05 0 0 0-1.87-2.23l-31-2.09c-1 0-1.57-.66-1.57-1.82l1.16-6.81c.22-1.15.8-1.43 1.84-1.37l41.94 2.32a1.94 1.94 0 0 1 1.72 2.13l-2.19 12.13a1.88 1.88 0 0 0 1.87 2.1l30.06 1.39c.93 0 1.24.53 1.03 1.62z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
